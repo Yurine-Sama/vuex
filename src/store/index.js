@@ -11,9 +11,7 @@ export default new Vuex.Store({
     buyClick4: 0,
     buyClick5: 0,
     buyClick6: 0,
-    buyClick7: 0,
-    mess:
-      "ขอบคุณที่ใช้บริการ สินค้าที่คุณลูกค้าสั่งนั้นจะถูกจัดส่งให้ในเร็วๆนี้ กรุณาตรวจสอบสินค้าของท่านด้วย ปล.ไม่สามารถคือสินค้าได้นะอิอิ"
+    buyClick7: 0
   },
   mutations: {
     buyClickI1: state => {
@@ -79,7 +77,9 @@ export default new Vuex.Store({
     },
     say: function(state) {
       if (state.buyClick7 != 0) {
-        return alert(state.mess);
+        return alert(
+          "ขอบคุณที่ใช้บริการ สินค้าที่คุณลูกค้าสั่งนั้นจะถูกจัดส่งให้ในเร็วๆนี้ กรุณาตรวจสอบสินค้าของท่านด้วย ปล.ไม่สามารถคือสินค้าได้นะอิอิ"
+        );
       } else if (state.buyClick7 <= 0) {
         return alert("ท่านต้องเลือกสินค้าสินค้าก่อนชำระเงินนะ");
       }

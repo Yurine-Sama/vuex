@@ -1,15 +1,16 @@
 <template>
   <div class="container">
-
     <h4>
       <b-icon icon="cart"></b-icon>รายการสินค้า<b-icon icon="cart"></b-icon>
     </h4>
     <h1>ราคาทั้งหมด = {{ $store.state.buyClick7 }} บาท</h1>
 
-    <b-button variant="success" v-on:click="store.commit('say')" @click="$store.commit('CancelAllItem')"
+    <b-button
+      variant="success"
+      v-on:click="$store.commit('say')"
+      @click="$store.commit('CancelAllItem')"
       >จ่ายเงิน</b-button
-    > {{say}}
-
+    >
     <b-button variant="danger" @click="$store.commit('CancelAllItem')">
       ยกเลิกการซื้อทั้งหมด
     </b-button>
@@ -79,7 +80,8 @@
             <small class="text-muted"
               ><b-button variant="warning" @click="$store.commit('buyClickI3')">
                 Buy<b-badge variant="light"
-                  >{{ $store.state.buyClick3 }}<span class="sr-only">unread messges</span>
+                  >{{ $store.state.buyClick3
+                  }}<span class="sr-only">unread messges</span>
                 </b-badge>
               </b-button>
               <b-button variant="danger" @click="$store.commit('CancelItem3')">
@@ -171,12 +173,5 @@
 </template>
 <script>
 // import { mapGetters } from "vuex";
-export default {
-  computed: {
-    // doneTodosCount() {
-    //   return this.$store.getters.doneTodosCount
-    // },
-
-  }
-};
+export default {};
 </script>
