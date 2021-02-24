@@ -11,10 +11,12 @@
       @click="$store.commit('CancelAllItem')"
       >จ่ายเงิน</b-button
     >
+
     <b-button variant="danger" @click="$store.commit('CancelAllItem')">
       ยกเลิกการซื้อทั้งหมด
     </b-button>
     <div>
+      {{ $store.state.showList}} 
       <b-card-group deck>
         <b-card
           id:1
